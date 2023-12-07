@@ -27,6 +27,7 @@ public class CourseServiceImpl implements CourseService {
 
             statement.executeUpdate();
             connection.commit();
+            System.out.println("Course Added Successfully");
         } catch (SQLException e) {
             try {
                 connection.rollback();
@@ -50,6 +51,7 @@ public class CourseServiceImpl implements CourseService {
 
             statement.executeUpdate();
             connection.commit();
+            System.out.println("Course Details Updated Successfully");
         } catch (SQLException e) {
             try {
                 connection.rollback();
@@ -70,6 +72,7 @@ public class CourseServiceImpl implements CourseService {
 
             statement.executeUpdate();
             connection.commit();
+            System.out.println("Course has been removed successfully");
         } catch (SQLException e) {
             try {
                 connection.rollback();
@@ -86,6 +89,7 @@ public class CourseServiceImpl implements CourseService {
         Course course = null;
 
         try (PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setInt(1, courseId);
             ResultSet resultSet = statement.executeQuery();
 
             if (resultSet.next()) {

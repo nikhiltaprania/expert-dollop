@@ -8,8 +8,7 @@ public class Course {
     public Course() {
     }
 
-    public Course(int courseId, String courseName, String courseCode) {
-        this.courseId = courseId;
+    public Course(String courseName, String courseCode) {
         this.courseName = courseName;
         this.courseCode = courseCode;
     }
@@ -36,5 +35,9 @@ public class Course {
 
     public void setCourseCode(String courseCode) {
         this.courseCode = courseCode;
+    }
+
+    public void displayCourse() {
+        System.out.format("\nCourse ID: %d\nCourse Name: %s\nCourse Name: %s\n", courseId, courseName, courseCode);
     }
 }

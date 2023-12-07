@@ -124,6 +124,7 @@ public class StudentServiceImpl implements StudentService {
                 int pinCode = resultSet.getInt("pin_code");
 
                 System.out.println("\n++++Student Details:++++");
+                System.out.println("ID: " + studentId);
                 System.out.println("Name: " + studentName);
                 System.out.println("Age: " + age);
                 System.out.println("Email: " + email);

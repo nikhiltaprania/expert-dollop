@@ -1,18 +1,20 @@
 package com.studentmanagement.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Enrollment {
     private int enrollmentId;
     private int studentId;
     private int courseId;
-    private Date enrollmentDate;
+    private Date enrollment_date;
 
-    public Enrollment(int enrollmentId, int studentId, int courseId, Date enrollmentDate) {
-        this.enrollmentId = enrollmentId;
+    public Enrollment() {
+    }
+
+    public Enrollment(int studentId, int courseId, Date enrollment_date) {
         this.studentId = studentId;
         this.courseId = courseId;
-        this.enrollmentDate = enrollmentDate;
+        this.enrollment_date = enrollment_date;
     }
 
     public int getEnrollmentId() {
@@ -39,11 +41,14 @@ public class Enrollment {
         this.courseId = courseId;
     }
 
-    public Date getEnrollmentDate() {
-        return enrollmentDate;
+    public Date getEnrollment_date() {
+        return enrollment_date;
     }
 
-    public void setEnrollmentDate(Date enrollmentDate) {
-        this.enrollmentDate = enrollmentDate;
+    public void setEnrollment_date(Date enrollment_date) {
+        this.enrollment_date = enrollment_date;
+    }
+    public void displayEnrollment() {
+        System.out.format("\nEnrollment ID: %d, Student ID: %d, Course ID: %d, Enrollment Date: %tF%n",enrollmentId, studentId, courseId, enrollment_date);
     }
 }

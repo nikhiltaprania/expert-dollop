@@ -7,6 +7,7 @@ public class Student {
     private String email;
     private String phone;
     private int address_id;
+    private int course_id;
 
     public Student() {
     }
@@ -66,7 +67,15 @@ public class Student {
         this.address_id = address_id;
     }
 
+    public int getCourse_id() {
+        return course_id;
+    }
+
+    public void setCourse_id(int course_id) {
+        this.course_id = course_id;
+    }
+
     public void displayStudent() {
-        System.out.format("Name: %s\nAge: %d\nEmail: %s\nPhone No: %s\nAddress ID: %d\n", name, age, email, phone, address_id);
+        System.out.format("Name: %s\nAge: %d\nEmail: %s\nPhone No: %s\nAddress ID: %d\nCourse ID: %d\n", name, age, email, phone, address_id, course_id);
     }
 }

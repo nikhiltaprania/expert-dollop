@@ -10,6 +10,7 @@ public interface EnrollmentService {
     void withdrawStudent(int enrollmentId);
 
     Enrollment getEnrollmentById(int enrollmentId);
+    void printAllDetailsOfEnrollment(int enrollmentId);
 
     List<Enrollment> getAllEnrollments();
 
